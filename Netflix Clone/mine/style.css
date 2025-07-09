@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.bg-img {
+  background-image: url("bacground.jpg");
+  height: 80vh;
+  background-size: cover;
+  position: relative;
+  z-index: -10;
+}
+
+.opac {
+  height: 80vh;
+  width: 100%;
+  background-color: black;
+  opacity: 0.45;
+  position: absolute;
+  top: 0;
+  z-index: -5;
+}
+.nav {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 12vw;
+  padding-right: 12vw;
+}
+.logo {
+  height: 50px;
+  width: 300px;
+  display: flex;
+
+  align-items: center;
+  /* position: relative;
+  z-index: 10; */
+}
+.logo-img {
+  height: 40px;
+}
+.lang {
+  display: flex;
+  align-items: center;
+  height: 40px;
+
+  position: relative;
+  z-index: 10;
+}
+.lang1 {
+  height: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: transparent;
+}
+.container {
+  width: 40vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.sign-in {
+  height: 32px;
+  width: 90px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 10;
+}
+.sign-in:hover {
+  background-color: #f40612;
+}

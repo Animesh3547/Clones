@@ -1,0 +1,184 @@
+/* General */
+body {
+  background: #000;
+  color: #fff;
+
+  font-family: "Inter", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-size: clamp(0.5rem, 1rem, 2rem); */
+}
+
+/* Navigation */
+.nav,
+.nav-left,
+.nav-right {
+  height: 9.3vh;
+  display: flex;
+  align-items: center;
+}
+.nav {
+  width: 100vw;
+}
+.nav-left,
+.nav-right {
+  width: 50vw;
+}
+.nav-right {
+  justify-content: flex-end;
+  gap: 3vw;
+}
+.nav button {
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  background: #000;
+  color: #fff;
+}
+.nav-right :last-child {
+  height: 6vh;
+  width: 8vw;
+  background: #fff;
+  color: #000;
+  border-radius: 25px;
+}
+.input {
+  height: 6.5vh;
+  width: 35vw;
+  border-radius: 20px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+.logos {
+  height: 5vh;
+  width: 10vw;
+  display: flex;
+  justify-content: space-around;
+}
+.logo-circle {
+  height: 6.8vh;
+  width: 3.8vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-circle img {
+  height: 3.5vh;
+}
+
+/* Layout */
+.left,
+.right {
+  display: inline-block;
+  vertical-align: top;
+  background: #121212;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+.left {
+  width: 33vw;
+  height: 100vh;
+  margin: 0 3px 0 8px;
+}
+.right {
+  width: 67vw;
+  height: 100vh;
+  margin: 0 8px 0 4px;
+}
+
+/* Library & Footer */
+.library {
+  margin: 10vh 0 0 0.7vw;
+  width: 30.5vw;
+  height: 25vh;
+}
+.footer {
+  height: 10vh;
+  width: 27vw;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 10vh 0 0 1.7vw;
+  flex-wrap: wrap;
+  opacity: 0.5;
+  display: flex;
+}
+.footer div {
+  margin-right: 15px;
+}
+
+/* Playlist & Cards */
+.playlist {
+  padding: 1rem;
+}
+.heading1 {
+  font-size: 22px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6vw;
+  margin: 10px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+  position: relative; /* Needed for absolute play button */
+}
+.card > * {
+  padding: 0.2rem;
+  margin: 0;
+}
+
+.card:hover {
+  background: #1b1b1b;
+  transform: scale(1.05);
+}
+
+.play-btn {
+  position: absolute;
+  left: 80%;
+  bottom: 66px;
+  transform: translate(-50%, 30px);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  background: #1db954;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(30, 185, 84, 0.2);
+}
+/* the absolut position and the translate are relative to each other changing 1 needs to change the other */
+.card:hover .play-btn {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.play-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: #000;
+}
+
+.card img {
+  width: 12vw;
+  height: 12vw;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
