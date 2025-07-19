@@ -1,0 +1,42 @@
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+
+.bordered {
+  border: 1px solid red;
+  margin: 3px;
+}
+.invert {
+  filter: invert(1);
+}
+.bg-black {
+  background-color: black;
+  color: white;
+}
+.bg-grey {
+  background-color: #1f1f1f;
+}
+.rounded {
+  border-radius: 7px;
+}
+.m-1 {
+  margin: 5px;
+}
+
+/* for chrome , safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: #222;
+}
